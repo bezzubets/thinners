@@ -1,0 +1,14 @@
+{% extends 'bt.html' %}
+{% block content %}
+<h1 align="center">КОНТАКТЫ.</h1>
+<br> <br>
+<p>Телефон/факс: +380-ХХ-ХХХХХХХ (да, да, мы используем древние инструменты для связи!!!)</p>
+<p>Телефон: +380-ХХ-ХХХХХХХ</p>
+<p>Email: qwerty@qwerty.wow</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block">Отправить сообщение</button>
+
+    {% endblock %}

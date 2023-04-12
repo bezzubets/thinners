@@ -1,0 +1,20 @@
+{% extends 'bt.html' %}
+{% load static %}
+{% block content %}
+{% for item in news %}
+<div class="card text-center">
+    <strong>
+        <div class="card-header">
+            {{ item.head }}
+        </div>
+    </strong>
+    <div class="card-body">
+        <h5 class="card-title">{{ item.text }}</h5>
+        <a href="/catalog/news" class="btn btn-primary">Вернуться</a>
+    </div>
+    <div class="card-footer text-muted">
+        {{ item.date}}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

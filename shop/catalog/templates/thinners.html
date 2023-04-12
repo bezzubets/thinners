@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 align="center">КАТАЛОГ ПРОДУКЦИИ ИМПОРТНОГО ПРОИЗВОДСТВА.</h2>
+{% for item in thinners %}
+<div class="card text-center mt-2">
+    <div class="card-header">
+        Растворитель
+    </div>
+    <div class="card-body">
+        <div class="media">
+
+            <div class="media-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.purpose }}</p>
+                <a href="/catalog/thinner/{{ item.pk }}" class="btn btn-primary">Информация о растворителе</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        {{ item.country }}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

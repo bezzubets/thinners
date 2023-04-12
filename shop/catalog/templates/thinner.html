@@ -1,0 +1,25 @@
+{% extends 'bt.html' %}
+{% block content %}
+<h2 align="center">КАТАЛОГ ПРОДУКЦИИ.</h2>
+{% for item in thinners %}
+<div class="card text-center mt-2">
+    <div class="card-header">
+        Растворитель
+    </div>
+    <div class="card-body">
+        <div class="media">
+            <div class="media-body" mr-auto>
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description}}</p>
+                <p class="card-text">{{ item.price}} {{ item.currency}}</p>
+                <a href="/catalog/order" class="btn btn-primary">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        {{ item.country }}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
